@@ -1,0 +1,9 @@
+/* .stat {
+  display: flex;
+} */
+.stat > p:not(:last-child) {
+  margin: 0 0 7px 0;
+}
+.stat > p:last-child {
+  margin: 0;
+}

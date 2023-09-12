@@ -1,0 +1,8 @@
+.button {
+  width: 80px;
+  padding: 10px;
+}
+.controls {
+  display: flex;
+  gap: 20px;
+}
