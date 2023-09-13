@@ -1,8 +1,11 @@
 .button {
+  text-transform: capitalize;
   width: 80px;
   padding: 10px;
 }
 .controls {
+  padding: 0;
+  list-style: none;
   display: flex;
   gap: 20px;
 }
