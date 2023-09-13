@@ -6,3 +6,7 @@
   display: flex;
   gap: 20px;
 }
+.title {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

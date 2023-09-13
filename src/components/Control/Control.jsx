@@ -1,7 +1,6 @@
 import { Component } from 'react';
 import css from './control.module.css';
-import StatData from 'components/StatData/StatData';
-import Statistics from 'components/Statistics/Statistics';
+
 class Control extends Component {
   state = {
     good: 0,
@@ -27,6 +26,7 @@ class Control extends Component {
   render() {
     return (
       <>
+        <h2 className={css.title}>Please leave feedback</h2>
         <div className={css.controls}>
           <button
             type="button"
@@ -53,14 +53,14 @@ class Control extends Component {
             Bad
           </button>
         </div>
-        <Statistics />
-        <StatData
+        <h2>Statistics</h2>
+        {/* <StatData
           good={this.state.good}
           neutral={this.state.neutral}
           bad={this.state.bad}
           total={this.countTotalFeedback()}
           percentage={this.countPositiveFeedbackPercentage()}
-        />
+        /> */}
       </>
     );
   }

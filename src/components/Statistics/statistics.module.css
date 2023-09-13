@@ -1,4 +1,9 @@
-.title {
-  margin-top: 15px;
-  margin-bottom: 15px;
+/* .stat {
+  display: flex;
+} */
+.stat > p:not(:last-child) {
+  margin: 0 0 7px 0;
+}
+.stat > p:last-child {
+  margin: 0;
 }
