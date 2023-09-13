@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import Statistics from './Statistics/Statistics';
+import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import css from './app.module.css';
 
 export class App extends Component {
@@ -27,40 +28,17 @@ export class App extends Component {
   render() {
     return (
       <>
-        <h2 className={css.title}>Please leave feedback</h2>
-        <div className={css.controls}>
-          <button
-            type="button"
-            className={css.button}
-            name="good"
-            onClick={this.statisticBtnHandler}
-          >
-            Good
-          </button>
-          <button
-            type="button"
-            className={css.button}
-            name="neutral"
-            onClick={this.statisticBtnHandler}
-          >
-            Neutral
-          </button>
-          <button
-            type="button"
-            className={css.button}
-            name="bad"
-            onClick={this.statisticBtnHandler}
-          >
-            Bad
-          </button>
-        </div>
+        <FeedbackOptions
+          options={this.state}
+          onLeaveFeedback={this.statisticBtnHandler}
+        />
         <h2>Statistics</h2>
         <Statistics
           good={this.state.good}
           neutral={this.state.neutral}
           bad={this.state.bad}
           total={this.countTotalFeedback()}
-          percentage={this.countPositiveFeedbackPercentage()}
+          positivePercentage={this.countPositiveFeedbackPercentage()}
         />
       </>
     );

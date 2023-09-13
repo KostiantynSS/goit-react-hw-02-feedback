@@ -25,7 +25,7 @@ class Statistics extends Component {
           Total: <span>{this.props.total}</span>
         </p>
         <p>
-          Positive feedback: <span>{this.props.percentage}</span>
+          Positive feedback: <span>{this.props.positivePercentage}</span>
         </p>
       </div>
     );
