@@ -3,6 +3,7 @@ import Statistics from './Statistics/Statistics';
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Section from './Section/Section';
 import Notification from './Notification/Notification';
+
 export class App extends Component {
   state = {
     good: 0,
@@ -26,7 +27,9 @@ export class App extends Component {
 
     return Number(percentage);
   };
+
   render() {
+    const { good, neutral, bad } = this.state;
     return (
       <>
         <Section title="Please leave feedback">
@@ -38,9 +41,9 @@ export class App extends Component {
         <Section title="Statistics">
           {this.countTotalFeedback() > 0 ? (
             <Statistics
-              good={this.state.good}
-              neutral={this.state.neutral}
-              bad={this.state.bad}
+              good={good}
+              neutral={neutral}
+              bad={bad}
               total={this.countTotalFeedback()}
               positivePercentage={this.countPositiveFeedbackPercentage() || 0}
             />
